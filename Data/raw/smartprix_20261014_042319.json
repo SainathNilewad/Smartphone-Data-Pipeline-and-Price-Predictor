@@ -1,0 +1,9 @@
+{
+  "source": "https://www.smartprix.com/mobiles/exclude_upcoming-stock",
+  "scraped_at": "2026-10-14T04:23:19",
+  "phone_cards": 1021,
+  "load_more_clicks": 54,
+  "stalled_clicks": 4,
+  "stop_reason": "Stopped after consecutive attempts added no new cards",
+  "html_file": "smartprix_20261014_042319.html"
+}
