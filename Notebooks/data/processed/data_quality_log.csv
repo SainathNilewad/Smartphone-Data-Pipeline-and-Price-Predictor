@@ -1,0 +1,10 @@
+﻿step,rows_affected,rows_before,rows_after,finding,decision
+price_inr,1021,1021,1021,Prices contained currency symbols and separators,Converted price text to numeric INR; retained the source price
+ram_gb,8,1021,1021,Some listings did not provide a parseable RAM value,Kept genuinely unknown RAM as NaN
+is_feature_phone,8,1021,1021,Eight initially unknown flags required model-level review,Applied the RAM threshold and documented manual classifications
+duplicate_removal,1,1021,1020,Duplicate OPPO F35 Pro listing confirmed,Removed one duplicate record
+os_family,1,1020,1020,Ringme Bold P70 has Android text without a version number,Extracted OS family independently; left missing version as NaN
+in_analysis_scope,838,1020,1020,Smartphone analysis excludes explicitly legacy OS versions,Included unknown OS/version cases; excluded feature phones
+battery_charging,213,1020,1020,Charging wattage is not provided for every listing,Kept unknown wattage as NaN and retained charging status separately
+display_specs,214,1020,1020,Refresh rate is not listed for some devices,Kept missing Hz as NaN; did not assume 60 Hz
+camera_specs,128,1020,1020,Some camera fields could not be extracted from listing text,Kept unavailable values as NaN; inspected examples for parser improvements
