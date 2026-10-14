@@ -1,0 +1,21 @@
+﻿step,rows_affected,rows_before,rows_after,finding,decision
+price_inr,1021,1021,1021,Price values contained currency symbols and separators,Converted prices to numeric INR; kept original text
+ram_storage,8,1021,1021,RAM and storage were unavailable in some listings,Extracted RAM and storage independently; kept unknowns as NaN
+is_feature_phone,115,1021,1021,"112 phones had RAM below 1 GB; the highest price in that group was ₹4,899, compared with ₹6,400 as the lowest price at 1 GB RAM or above; 3 additional phones were manually classified",Used the observed price separation to support the RAM threshold and documented the three model-level decisions
+duplicate_removal,1,1021,1020,Duplicate OPPO F35 Pro listing confirmed,Removed one duplicate
+os_family,1,1020,1020,146 OS-family values missing; 147 OS versions missing,Recognized family without requiring version; retained unknowns
+is_legacy_os,67,1020,1020,67 smartphones met the defined legacy-version thresholds,Flagged Android <= 11 and iOS <= 14 without deleting records
+in_analysis_scope,838,1020,1020,838 smartphones included in the main analysis,Excluded feature phones and explicitly legacy smartphones
+battery_charging,213,1020,1020,807 wattages known; 73 fast-charging mentions without wattage; 140 without a fast-charging mention,Kept unknown wattage as NaN; retained charging status
+display_specs,214,1020,1020,Missing screen size: 1; missing resolution: 15; missing Hz: 214,Kept unlisted specifications as NaN; did not assume 60 Hz
+camera_specs,128,1020,1020,Missing rear-main MP: 55; rear-camera count: 19; front MP: 127,Kept unavailable values as NaN; explicit No Rear Camera remains zero
+processor_specs,193,1020,1020,Missing processor names: 107; CPU cores: 112; CPU speed: 169,Used unclassified as a fallback only when processor text was missing; converted MHz to GHz and mapped Nine Core to 9
+processor_fallback,22,1020,1020,Recovered 22 chip names from unclassified,Kept the original processor text as the first source
+memory_card,274,1020,1020,Unsupported: 225; supported: 521; unknown: 274,Created a nullable Boolean; kept missing descriptions unknown
+scrape_date,1020,1020,1020,Collection date: 2026-10-14,Added collection date from scraper metadata for future price tracking
+sim_features,10,1020,1020,Each SIM feature flag has 10 missing values,Used NA where SIM text is absent; did not infer unsupported features
+brand,0,1020,1020,Brand derived from the first word of model names,Standardized casing using the most common spelling per group
+is_foldable,38,1020,1020,38 listings contained Foldable Display,Created a foldable flag without deleting records
+processor_mhz,58,1020,1020,Processor speeds were listed in MHz as well as GHz,Converted MHz to GHz by dividing by 1000
+brand_corrections,3,1020,1020,Found spelling variants Samaung and Moto,Standardized them to Samsung and Motorola
+cpu_speed_quality,39,1020,1020,39 listings produced derived CPU speeds below 0.1 GHz,Set these speeds to NaN pending source verification

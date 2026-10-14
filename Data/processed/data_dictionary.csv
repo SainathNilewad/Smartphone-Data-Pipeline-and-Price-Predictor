@@ -1,0 +1,32 @@
+﻿column,meaning,unit,missing_handling
+model,Smartphone model,Text,Required
+url,Source product listing,URL,Required for traceability
+brand,Standardized brand,Text,Required
+scrape_date,Collection date,Date,From scrape metadata
+price_inr,Listed price,INR,Required
+spec_score,Website specification score,Points,Source value
+processor_name,Processor/chipset name,Text,Unknown kept as NaN
+cpu_cores,Number of CPU cores,Cores,Unknown kept as NaN
+cpu_ghz,Processor speed,GHz,MHz converted to GHz; suspicious values below 0.1 GHz kept as NaN
+ram_gb,RAM capacity,GB,Unknown kept as NaN
+storage_gb,Internal storage,GB,Unknown kept as NaN
+battery_mah,Battery capacity,mAh,Extracted from source
+fast_charge_w,Charging wattage,W,Unknown kept as NaN
+charging_status,Charging information status,Category,Separates unknown wattage from unmentioned charging
+screen_in,Screen size,Inches,Unknown kept as NaN
+res_short,Short resolution dimension,Pixels,Unknown kept as NaN
+res_long,Long resolution dimension,Pixels,Unknown kept as NaN
+refresh_hz,Screen refresh rate,Hz,Not assumed to be 60 Hz
+rear_main_mp,First identified rear camera resolution,MP,Unknown kept as NaN
+rear_mp_value_count,Identified rear-camera count,Cameras,Zero only when explicitly stated
+front_mp,Front camera resolution,MP,Unknown kept as NaN
+os_family,Operating system family,Category,Unknown kept as NaN
+os_major,Major OS version,Version,Unknown kept as NaN
+is_feature_phone,Feature-phone flag,Boolean,RAM threshold plus reviewed exceptions
+is_legacy_os,Legacy OS flag,Boolean,Unknown kept as NA
+in_analysis_scope,Included in primary analysis,Boolean,Excludes feature phones and identified legacy smartphones
+is_foldable,Foldable-display flag,Boolean,Based on source label
+is_5g,5G mentioned in SIM text,Boolean,Missing SIM text remains unknown
+has_nfc,NFC mentioned in SIM text,Boolean,Missing SIM text remains unknown
+has_esim,eSIM mentioned in SIM text,Boolean,Missing SIM text remains unknown
+has_memory_card,Memory-card support,Boolean,Unknown descriptions remain NA
