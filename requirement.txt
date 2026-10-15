@@ -7,3 +7,5 @@ selenium
 scikit-learn
 matplotlib
 seaborn
+xgboost 
+lightgbm
