@@ -18,7 +18,7 @@ res_short,Short resolution dimension,Pixels,Unknown kept as NaN
 res_long,Long resolution dimension,Pixels,Unknown kept as NaN
 refresh_hz,Screen refresh rate,Hz,Not assumed to be 60 Hz
 rear_main_mp,First identified rear camera resolution,MP,Unknown kept as NaN
-rear_mp_value_count,Identified rear-camera count,Cameras,Zero only when explicitly stated
+rear_mp_value_count,Count of megapixel values listed in rear-camera text,MP values,Unknown kept as NaN; zero retained for explicit No Rear Camera
 front_mp,Front camera resolution,MP,Unknown kept as NaN
 os_family,Operating system family,Category,Unknown kept as NaN
 os_major,Major OS version,Version,Unknown kept as NaN

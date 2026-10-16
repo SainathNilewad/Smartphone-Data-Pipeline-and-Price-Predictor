@@ -1,9 +1,9 @@
 ﻿step,rows_affected,rows_before,rows_after,finding,decision
 price_inr,1021,1021,1021,Price values contained currency symbols and separators,Converted prices to numeric INR; kept original text
 ram_storage,8,1021,1021,RAM and storage were unavailable in some listings,Extracted RAM and storage independently; kept unknowns as NaN
-is_feature_phone,115,1021,1021,"112 phones had RAM below 1 GB; the highest price in that group was ₹4,899, compared with ₹6,400 as the lowest price at 1 GB RAM or above; 3 additional phones were manually classified",Used the observed price separation to support the RAM threshold and documented the three model-level decisions
+is_feature_phone,115,1021,1021,112 listings had RAM below 1 GB; seven unique records with missing RAM were manually reviewed: three classified as feature phones and four as smartphones,Applied a RAM/specification-based heuristic with manual model-level review. The observed price separation supports the exploratory analysis but does not independently validate the feature-phone definition.
 duplicate_removal,1,1021,1020,Duplicate OPPO F35 Pro listing confirmed,Removed one duplicate
-os_family,1,1020,1020,146 OS-family values missing; 147 OS versions missing,Recognized family without requiring version; retained unknowns
+os_family,146,1020,1020,146 OS-family values missing; 147 OS versions missing,Recognized family without requiring version; retained unknowns
 is_legacy_os,67,1020,1020,67 smartphones met the defined legacy-version thresholds,Flagged Android <= 11 and iOS <= 14 without deleting records
 in_analysis_scope,838,1020,1020,838 smartphones included in the main analysis,Excluded feature phones and explicitly legacy smartphones
 battery_charging,213,1020,1020,807 wattages known; 73 fast-charging mentions without wattage; 140 without a fast-charging mention,Kept unknown wattage as NaN; retained charging status
